@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { BikerTimelineSection } from "@/components/sections/biker-timeline";
 import { ContactStrip } from "@/components/sections/contact-strip";
 import { DonationsStrip } from "@/components/sections/donations-strip";
+import { EndorsementStrip } from "@/components/sections/endorsement-strip";
 import { GainablesHero } from "@/components/sections/gainables-hero";
 import { MissionStrip } from "@/components/sections/mission-strip";
 import { SignupStrip } from "@/components/sections/signup-strip";
@@ -91,7 +92,10 @@ export default async function HomePage() {
       {/* 5. Sponsors — floating logos, no cards */}
       <SponsorStrip sponsors={sponsors} />
 
-      {/* 6. Email signup */}
+      {/* 6. Endorsement — letter from the Prime Minister */}
+      <EndorsementStrip />
+
+      {/* 7. Email signup */}
       <SignupStrip />
 
       {/* 7. Contact / socials */}

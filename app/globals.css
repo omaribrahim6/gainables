@@ -263,3 +263,29 @@
     offset-rotate: auto;
   }
 }
+
+/* Slow breathing scale on the PM-letter quotation glyph. transform/opacity
+   only so it stays on the compositor and never triggers layout. */
+.quote-breath {
+  animation: quoteBreath 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  transform-origin: 30% 70%;
+  will-change: transform, opacity;
+}
+
+@keyframes quoteBreath {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: translate3d(0, -4px, 0) scale(1.025);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-breath {
+    animation: none;
+  }
+}
