@@ -98,7 +98,7 @@ export default async function HomePage() {
       {/* 7. Email signup */}
       <SignupStrip />
 
-      {/* 7. Contact / socials */}
+      {/* 8. Contact / socials */}
       <ContactStrip media={content.media} />
     </main>
   );
